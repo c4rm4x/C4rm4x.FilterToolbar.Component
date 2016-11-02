@@ -1,0 +1,8 @@
+<div layout="row" class="input-row">
+    <md-input-container flex>        
+        <md-select ng-model='optionFilter.optionSelected' ng-init='optionFilter.optionSelected = null'>
+            <md-option ng-value='null'>All</md-option>
+            <md-option ng-value='opt[option.settings.value] || opt' ng-repeat='opt in option.settings.options'>{{ opt[option.settings.description] || opt }}</md-option>
+        </md-select>
+    </md-input-container>
+</div>

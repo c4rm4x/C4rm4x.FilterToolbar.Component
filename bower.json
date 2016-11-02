@@ -1,0 +1,32 @@
+{
+  "name": "'filtertoolbar'",
+  "version": "1.0.0",
+  "description": "Toolbar including filter functionallity",
+  "main": "src/angular-filter-toolbar.js",
+  "authors": [
+    "]C4rM4x["
+  ],
+  "license": "ISC",
+  "keywords": [
+    "material",
+    "angular",
+    "filter",
+    "toolbar"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.3"
+  }
+}

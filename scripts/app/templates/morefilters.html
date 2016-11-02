@@ -1,0 +1,23 @@
+<md-dialog add-item-dialog>
+  <md-dialog-content class='md-dialog-content'>
+    
+    <h2 class='md-title'>More filters</h2>
+    
+    <form name='form' ng-submit='apply()'>
+      <div layout='row' class='input-row' ng-repeat='option in options'>
+      	<md-container flex>
+              <h3 class='md-subhead'>{{ option.description }}</h3>
+              <md-filter-toolbar-options ng-if='option.type === "options"' option='option' filter='filter'></md-filter-toolbar-options>
+              <md-filter-toolbar-number ng-if='option.type === "number"' option='option' filter='filter'></md-filter-toolbar-number>
+        </md-container>        
+      </div>
+    </form>
+    
+  </md-dialog-content>
+  
+  <div class='md-actions'>
+    <md-button class='md-primary' ng-click='apply()' ng-disabled='form.$invalid'>Apply</md-button>
+    <md-button class='md-primary' ng-click='cancel()'>Cancel</md-button>
+  </div>
+  
+</md-dialog>

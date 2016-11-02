@@ -1,0 +1,38 @@
+{
+  "name": "'filtertoolbar'",
+  "version": "1.0.0",
+  "description": "Toolbar including filter functionallity",
+  "main": "src/angular-filter-toolbar.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c4rm4x/C4rm4x.FilterToolbar.Component.git"
+  },
+  "keywords": [
+    "material",
+    "angular",
+    "filter",
+    "toolbar"
+  ],
+  "author": "]C4rM4x[",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c4rm4x/C4rm4x.FilterToolbar.Component/issues"
+  },
+  "homepage": "https://github.com/c4rm4x/C4rm4x.FilterToolbar.Component#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-angular-templates": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jasmine": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "bower": "^1.7.9",
+    "grunt-cli": "^1.2.0"
+  }
+}

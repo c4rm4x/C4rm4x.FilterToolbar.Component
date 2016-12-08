@@ -13,7 +13,8 @@ filterToolBarDirectives.directive('mdFilterToolbar', [
 			scope: {
 				filter: '=',
 				title: '@',
-				options: '='
+				options: '=',
+				queryDisabled: '='
 			},
 			templateUrl: 'templates/mdfiltertoolbar.html',
 			transclude: true,

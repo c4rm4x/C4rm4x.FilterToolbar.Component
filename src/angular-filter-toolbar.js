@@ -213,7 +213,8 @@ filterToolBarDirectives.directive('mdFilterToolbar', [
 			scope: {
 				filter: '=',
 				title: '@',
-				options: '='
+				options: '=',
+				queryDisabled: '='
 			},
 			templateUrl: 'templates/mdfiltertoolbar.html',
 			transclude: true,
@@ -305,7 +306,7 @@ angular.module('md-filter-toolbar-templates').run(['$templateCache', function($t
 
 
   $templateCache.put('templates/mdfiltertoolbar.html',
-    "<div ng-cloak><md-toolbar ng-hide=\"isFilterEnabled\"><div class=\"md-toolbar-tools\"><h2><span>{{ title }}</span></h2><span flex></span><md-button class=\"md-icon-button\" aria-label=\"Filter\" ng-click=\"isFilterEnabled = true\"><md-icon><i class=\"material-icons\">filter_list</i><md-tooltip>Filter</md-tooltip></md-icon></md-button><ng-transclude></ng-transclude></div></md-toolbar><md-toolbar ng-show=\"isFilterEnabled\"><div class=\"md-toolbar-tools\"><md-button class=\"md-icon-button\" aria-label=\"Back\" ng-click=\"isFilterEnabled = false; clearFilter()\"><md-icon><i class=\"material-icons\">keyboard_backspace</i><md-tooltip>Back</md-tooltip></md-icon></md-button><form flex><input type=\"text\" ng-model=\"filter.query\" placeholder=\"search...\" style=\"width:100%; max-width:100%; color:black; padding-left:5px; border-radius:5px\"></form><md-button class=\"md-accent\" ng-show=\"options.length > 0\" ng-click=\"showMoreOptions($event)\">More</md-button></div><div ng-show=\"moreFilters.length > 0\" style=\"margin-left:15px; margin-bottom:5px; margin-right:15px\"><md-chips ng-model=\"moreFilters\" md-on-remove=\"filterRemoved($chip)\" md-removable=\"true\" readonly><md-chip-template><strong>{{ $chip.index }}</strong>: {{ $chip.description() }}</md-chip-template></md-chips></div></md-toolbar></div>"
+    "<div ng-cloak><md-toolbar ng-hide=\"isFilterEnabled\"><div class=\"md-toolbar-tools\"><h2><span>{{ title }}</span></h2><span flex></span><md-button class=\"md-icon-button\" aria-label=\"Filter\" ng-click=\"isFilterEnabled = true\"><md-icon><i class=\"material-icons\">filter_list</i><md-tooltip>Filter</md-tooltip></md-icon></md-button><ng-transclude></ng-transclude></div></md-toolbar><md-toolbar ng-show=\"isFilterEnabled\"><div class=\"md-toolbar-tools\"><md-button class=\"md-icon-button\" aria-label=\"Back\" ng-click=\"isFilterEnabled = false; clearFilter()\"><md-icon><i class=\"material-icons\">keyboard_backspace</i><md-tooltip>Back</md-tooltip></md-icon></md-button><form flex><input type=\"text\" ng-model=\"filter.query\" placeholder=\"search...\" style=\"width:100%; max-width:100%; color:black; padding-left:5px; border-radius:5px\" ng-disabled=\"queryDisabled\"></form><md-button class=\"md-accent\" ng-show=\"options.length > 0\" ng-click=\"showMoreOptions($event)\">More</md-button></div><div ng-show=\"moreFilters.length > 0\" style=\"margin-left:15px; margin-bottom:5px; margin-right:15px\"><md-chips ng-model=\"moreFilters\" md-on-remove=\"filterRemoved($chip)\" md-removable=\"true\" readonly><md-chip-template><strong>{{ $chip.index }}</strong>: {{ $chip.description() }}</md-chip-template></md-chips></div></md-toolbar></div>"
   );
 
 

@@ -1,6 +1,6 @@
 {
   "name": "'filtertoolbar'",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Toolbar including filter functionallity",
   "main": "src/angular-filter-toolbar.js",
   "scripts": {
